@@ -1,0 +1,15 @@
+@isTest
+public class TestVerifyDate {
+@isTest static void CheckDates_TestCase1(){
+    //Check for if Date2 is within the range of 30 days from Date1
+    Date returnResult = VerifyDate.CheckDates(Date.valueOf('2023-12-13'), Date.valueOf('2023-12-20'));
+    System.assertEquals(Date.valueof('2023-12-20'), returnResult);
+    }
+    @isTest static void CheckDates_TestCase2(){
+        // Date2 is not within the range of Datel
+        Date returnResult = VerifyDate.CheckDates(Date.valueOf('2023-12-13'), Date.valueof('2023-10-14'));
+        System.assertEquals(Date.valueof('2023-12-31'), returnResult);
+        
+    }
+
+  }
